@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="840">
     <Grid>
         <Button x:Name="shutdown_button" Content="Shutdown" HorizontalAlignment="Left" Margin="351,117,0,0" VerticalAlignment="Top" Click="shutdown_button_Click"/>
-        <Button x:Name="primary_coolant_system_button" Content="VerifyPrimaryCoolantSystem" HorizontalAlignment="Left" Margin="12,53,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button x:Name="primary_coolant_system_button" Content="VerifyPrimaryCoolantSystem" HorizontalAlignment="Left" Margin="12,53,0,0" VerticalAlignment="Top" Click="primary_coolant_system_button_Click"/>
         <Button x:Name="backup_coolant_system_button" Content="VerifyBackupCoolantSystem" HorizontalAlignment="Left" Margin="15,110,0,0" VerticalAlignment="Top" Click="backup_coolant_system_button_Click"/>
         <Button x:Name="core_temperature_button" Content="GetCoreTemperature" HorizontalAlignment="Left" Margin="198,113,0,0" VerticalAlignment="Top" Click="core_temperature_button_Click"/>
         <Label Content="Generator" HorizontalAlignment="Left" Margin="348,86,0,0" VerticalAlignment="Top"/>

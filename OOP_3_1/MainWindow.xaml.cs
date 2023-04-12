@@ -158,7 +158,7 @@ namespace OOP_3_1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public void final_check()
+        public void final_check()//функция проверяющая общее состояние всех систем
         {
             if (generator_status.Content.ToString()== "Success" &&
                 core_status.Content.ToString() != "" && 
@@ -172,7 +172,7 @@ namespace OOP_3_1
             }
         }
 
-        Switch myswitch = new Switch();
+        Switch myswitch = new Switch();//создание экземпляра класса switch
         public MainWindow()
         {
             InitializeComponent();
@@ -182,9 +182,9 @@ namespace OOP_3_1
         {
             try
             {
-                generator_status.Content = myswitch.DisconnectPowerGenerator().ToString();
-            }
-            catch (PowerGeneratorCommsException ex)
+                generator_status.Content = myswitch.DisconnectPowerGenerator().ToString();//вызывает метод класса
+            }//результат выполнения метода выводит на экран
+            catch (PowerGeneratorCommsException ex)//ловит исключение и выводит текст сообщения в messagebox
             {
                 MessageBox.Show(ex.Message);
             }
@@ -196,7 +196,7 @@ namespace OOP_3_1
 
         private void core_temperature_button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            try//аналогично предыдущему обработчику
             {
                 core_status.Content = myswitch.GetCoreTemperature().ToString();
             }
@@ -232,9 +232,8 @@ namespace OOP_3_1
             {
                 backup_coolant_system_status.Content = myswitch.VerifyBackupCoolantSystem().ToString();
             }
-            catch (Exception ex)
+            catch (Exception ex)//не указывается какое конкретно исключение дабы обрабатывать 2 возможных
             {
-
                 MessageBox.Show(ex.Message);
             }
             finally
@@ -243,7 +242,7 @@ namespace OOP_3_1
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void primary_coolant_system_button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
